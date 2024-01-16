@@ -1,0 +1,338 @@
+/* color controller */
+:root {
+    --background: #333;
+    --bright: #f5e44c;
+    --text: #d1c441;
+
+}
+
+.link {
+    color: var(--bright);
+}
+.link:visited {
+    color: var(--text); 
+}
+
+/* used to toggle between texts/imgs for
+about, certs, projs*/
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ HEADER STUFF @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/* used for switching style of website */
+.style-arrow-left {
+    transform: scaleX(-1) scale(0.5);   
+    margin-bottom: 10px;
+}
+.style-arrow-right {
+    transform: scale(0.5);   
+    margin-bottom: 10px;
+}
+
+header {
+    height: 30px;
+    background-color: var(--background); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+/* position the contact header */
+.global-header {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+/* name */
+.global-header h1 {
+    margin-top:12px;
+    margin-left:3px;
+    color: var(--bright);
+    font: 30px Garamond, serif;
+}
+
+/* actual contact info */
+.global-header ul {
+    color: var(--text);
+    list-style-type: none;
+    font: 15px Garamond, serif;
+    margin-top: 2px;
+}
+
+/* position,style header links */
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+/* spacing between links */
+nav ul li {
+    margin-right: 20px;
+}
+
+/* no margin on last link */
+nav ul li:last-child {
+    margin-right: 0; 
+}
+
+/* default style for all page text links */
+nav a.passive {
+    font: 20px Garamond, serif;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* make current page have bold text */
+nav a.current-page {
+    font: 20px Garamond, serif;
+    text-decoration: none;
+    color: var(--bright);
+    font-weight: bold;
+}
+
+
+/*@@@@@@@@@@@@@@@@@@@@ MAIN CONTENT@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+body {
+	background: var(--background);
+}
+
+.main-content {
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+	margin: 60px auto;
+	width: 1200px;   
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ INDEX @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* index page styles */
+.index {
+    display:flex;
+    width:1200px;
+    height: 700px;
+    border: 1px solid var(--bright);
+    background-image: url("images/background/intro1.png");
+    background-position: center;
+    background-size: cover;
+}
+.index h1 {
+    width: 470px;
+    /* background-color: aqua; */
+    font: 36px Garamond, serif;
+    margin-top: 199px;
+    margin-left:120px;
+    word-wrap: break-word;
+}
+.index h1::first-letter {
+    font: 60px Garamond, serif;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* person looking right */
+.index-person {
+    z-index: 999;
+    position: absolute;
+    margin-top: 320px;
+    margin-left: 100px;
+}
+
+/* clickable start button to go to about page */
+.index-start-button {
+    visibility: hidden;
+    position: absolute;
+}
+
+.index-password-prompt {
+    visibility: hidden;
+    position: absolute;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ ABOUT @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+.about { /* styling for about page */
+    border: 1px solid var(--bright);
+    height: 690px;
+    background-image: url("images/background/tall1.png");
+    background-position: center;
+    display:flex;
+    /* margin-left: 950px; */
+    overflow:scroll;
+}
+.about-content {
+    background-position: center;
+    background-image: url("images/background/tall1.png");
+}
+.about h1 { /*the text*/
+    width: 465px;
+    padding:10px;
+    font: 25px Garamond, serif;
+    margin-top: 160px;
+    margin-left:0px;
+    word-wrap: break-word;
+    /* background-color: aqua; */
+}
+.about h1::first-letter {
+    font: 50px Garamond, serif;
+    font-weight: bold;
+    color: #000000;
+}
+.about-password-prompt {
+    visibility: hidden;
+    position: absolute;
+}
+
+/* person looking left */
+.about-person {
+    z-index: 999;
+    position: absolute;
+    margin-top: 480px;
+    margin-right: 999px;
+    /* background-color: aqua; */
+}
+
+/* arrow looking left */
+.about-arrow-left {
+    display: none;
+}
+/* arrow looking right */
+.about-arrow-right {
+    display: none;
+}
+
+/*bat img*/
+.about-bat {
+    visibility: hidden;
+    position: absolute;
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ RESUME @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.resume { 
+    border: 1px solid var(--bright);
+    background-position: center;
+    display:flex;
+}
+.resume iframe { 
+    background-color: var(--dark);
+    width: 1000px;
+    padding: 10px;
+    font-family: 'arcade-font';
+    height: 720px;
+}
+
+/* button for link */
+.resume-button { 
+    transform: scale(.1);
+    z-index: 999;
+    position: absolute;
+    margin-top: -215px;
+    margin-left: -297px;
+}
+
+/* text style at bottom */
+.resume-password-prompt { 
+    visibility: hidden;
+    position: absolute;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ certifications @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.cert { 
+    background-color: black;
+    border: 1px solid var(--bright);
+    background-position: center;
+    padding:10px;
+    display:flex;
+    overflow: scroll;
+}
+
+.cert-content {
+    width: 863px; 
+    height:670px;
+}
+
+.cert img {
+    border: var(--bright);
+    width: 865px;
+}
+
+/* arrow looking left */
+.cert-arrow-left {
+    display: none;
+}
+/* arrow looking right */
+.cert-arrow-right {
+    display: none;
+}
+
+.cert-password-prompt { /* text style at bottom */
+    visibility: hidden;
+    position: absolute;
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ PROJECTS @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+.projects { /* styling for about page */
+    border: 1px solid var(--bright);
+    height: 690px;
+    background-image: url("images/background/tall1.png");
+    background-position: center;
+    /* background-size: contain; */
+    display: flex;
+    overflow: scroll;
+}
+.projects-content {
+    background-position: center;
+    background-image: url("images/background/tall1.png");
+}
+.projects h1 { /*the text*/
+    width: 465px;
+    padding:10px;
+    font: 25px Garamond, serif;
+    margin-top: 160px;
+    margin-left:0px;
+    word-wrap: break-word;
+    /* background-color: aqua; */
+}
+.projects h1::first-letter {
+    font: 50px Garamond, serif;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* arrow looking left */
+.projects-arrow-left {
+    display: none;
+}
+/* arrow looking right */
+.projects-arrow-right {
+    display: none;
+}
+/* person looking left */
+.projects-person {
+    z-index: 999;
+    position: absolute;
+    margin-top: 480px;
+    margin-right: 999px;
+    /* background-color: aqua; */
+}
+
+.projects-password-prompt {
+    visibility: hidden;
+    position: absolute;
+}
+
+/* @@@@@@@@@@@@@@@@@ footer @@@@@@@@@@@@@@@*/
+footer {
+    display: none;
+    /* justify-content: center;
+    align-items: center;
+    color: #000;
+    text-align: center;
+    background-color: var(--bright);
+    font: 20px Garamond;
+    width: 500px auto;
+    margin-left: 20%;
+    margin-right: 20%; */
+}

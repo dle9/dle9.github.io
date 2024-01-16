@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link id="style" rel="stylesheet" href="styles2.css"></link>
+    <script src="main.js"></script>
+</head>
+
+
+<body>
+    <header>
+        <div class="global-header">
+            <img alt="left arrow to switch styles" class="style-arrow-left" src="images/light-style-arrow.png" id="style-arrow-left">
+            <h1 id="name">Deric Le</h1>
+            <img alt="right arrow to switch styles" class="style-arrow-right" src="images/light-style-arrow.png" id="style-arrow-right">
+    
+            <ul>
+                <li>xxx-xxx-xxxx</li>
+                <li>xxxxx@gmail.com</li>
+            </ul>
+        </div>
+        <nav>
+            <ul>
+                <li><a class="current-page" href="index.html">Home</a></li>
+                <li><a class="passive" href="about.html">About</a></li>
+                <li><a class="passive" href="resume.html">Resume</a></li>
+                <li><a class="passive" href="certifications.html">Certifications</a></li>
+                <li><a class="passive" href="projects.html">Projects</a></li>
+                <!-- <li><a class="passive" href="chatgpt.html">ChatGPT</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content">    
+        <img class="projects-person" src="images/black-cat.png" id="person" alt="person">
+        <img class="projects-arrow-left" src="images/light-content-arrow.png" id="content-arrow-left" alt="left arrow image">
+        <img class="projects-arrow-right" src="images/light-content-arrow.png" id="content-arrow-right" alt="right arrow image">
+
+        <div class="projects">
+            <div id="projects-text-1" class="projects-content">
+                <h1>
+                    The first project I'll be talking about is one I did the summer of 2023.
+                    My goal was to get experience in cybersecurity attacks 
+                    and ways to defend against those attacks. Using VirtualBox, I created a virtual
+                    <a class="link" target="_blank" href="https://linuxhandbook.com/homelab/">
+                    homelab</a> with a web server, firewall, and basic Ubuntu machines. I learned how to create 
+                    my own web server with Apache and MySQL, configure firewalls, create Suricata rules to
+                    detect malicious activity, exploit/defend against web application vulnerabilities, and more.
+                </h1>
+            </div>
+            <div id="projects-text-2" class="projects-content">
+                <h1>
+                    Another one of my (group) projects was for a 
+                    <a class="link" target="_blank" href="https://en.wikipedia.org/wiki/Game_jam">
+                    Game jam</a> here at A&M. We used Ursina, a game engine library in Python, to create
+                    a 3D first-person shooter where the user is placed in a 
+                    <a class="link" target="_blank" href="https://github.com/alludent/acc-challenge2023">
+                    post-apocalyptic world filled with hostile robots</a>. 
+                    Creating a 3D shooter game within 1-2 weeks was a bit overconfident
+                    since most of us hadn't ever made a game before. Nevertheless, we did the best we could; my contributions being:
+                    the grappling hook logic, enemy spawning, and code organization. 
+                </h1>
+            </div>
+            <div id="projects-text-3" class="projects-content">
+                <h1>
+                    The final project I'll be talking about was also done the summer of 2023. Using Rust, 
+                    <a class="link" target="_blank" href="https://github.com/alludent/rustyrpg">
+                    I created a simple RPG</a> 
+                    played on the command line. The user starts with 
+                    a handful of currency, and can play a variety of mini-games to increase their
+                    net worth. As an alternative to generating money, they can buy and sell items 
+                    from the Market or explore the dungeon. This project was a great way to learn 
+                    about the Rust fundamentals, i.e., ownership, types, memory management, etc.
+                </h1>
+            </div>
+        </div>
+        <a id="password-prompt" class="projects-password-prompt" href="#">Proceed with password</a>
+    </div>
+
+    <footer>
+        Backgrounds were created with MS Paint and SketchUp.<br>
+        IMPORTANT (note for grader): About Page contains areas of interest,<br>
+        technical skills, service details, and general information about me.
+    </footer>
+</body>
+</html>

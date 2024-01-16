@@ -1,0 +1,422 @@
+
+/* manage all colors */
+:root {
+    --background: #1b0058;
+    --text: #8ad4ff;
+    --bright: #82f0ff;
+    --dark: #347f92;
+}
+
+.link {
+    color: var(--bright);
+}
+.link:visited {
+    /* color: #a73e01;  */
+    color: var(--dark); 
+}
+
+/* truetype font file -> fontsuirrel -> this*/
+@font-face {
+    /* super legend boy regular */
+    font-family: 'arcade-font';
+    src: url('fonts/arcade-font-webfont.woff2') format('woff2'),
+         url('fonts/arcade-font-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ HEADER STUFFF @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* arrow image positions */
+.style-arrow-left {
+    transform: scaleX(-1) scale(0.5);   
+    margin-bottom: 10px;
+}
+.style-arrow-right {
+    transform: scale(0.5);   
+    margin-bottom: 10px;
+}
+
+header {
+    height: 30px;
+    background-color: var(--background); /* Choose your desired background color */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    padding: 10px 10px;
+}
+
+/* position the contact header */
+.global-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+/* name */
+.global-header h1 {
+    margin-top:12px;
+    margin-left:3px;
+    color: var(--bright);
+    font-family: 'arcade-font';   
+}
+
+/* actual contact info */
+.global-header ul {
+    color: var(--bright);
+    list-style-type: none;
+    font-family: 'arcade-font';
+    margin-top: 2px;
+    font-size: 11px;
+}
+
+nav {
+    /* flex:1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 10px; */
+}
+/* position,style header links */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    font-size: 16px;
+}
+
+/* spacing between links */
+nav ul li {
+    margin-right: 20px;
+}
+
+/* no margin on last link */
+nav ul li:last-child {
+    margin-right: 0; 
+}
+
+/* default style for all page text links */
+nav a.passive {
+    font-family: 'arcade-font';
+    text-decoration: none;
+    color: #FFF;
+}
+
+/* make current page have bold text */
+nav a.current-page {
+    font-family: 'arcade-font';
+    text-decoration: none;
+    color: var(--bright);
+    font-weight: bold;
+}
+
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ MAIN CONTENT @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+body {
+	background: var(--background);
+	padding: 0px;
+    font: 13px Georgia, Serif; 
+	color: var(--text);	    
+    /* align-items: center; */
+}
+
+.main-content {
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+	margin: 60px auto;
+	width: 1200px;   
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ INDEX @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* index page styles */
+.index {
+    display:flex;
+    width:1200px;
+    height: 700px;
+    border: 3px solid var(--bright);
+    background-image: url("images/background/intro2.png");
+    background-position: center;
+    background-size: cover;
+}
+.index h1 {
+    width: 470px;
+    /* background-color: aqua; */
+    font-family: 'arcade-font', sans-serif;
+    margin-top: 199px;
+    margin-left:200px;
+    word-wrap: break-word;
+    font-size: 32px;
+}
+.index h1::first-letter {
+    font-size: 40px;
+    font-family: 'arcade-font';
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.index-person {
+    z-index: 999;
+    position: absolute;
+    margin-top: 33px;
+    margin-left: 517px;
+}
+
+/* clickable start button to go to about page */
+.index-start-button {
+    /* visibility: hidden; */
+    /* transform: scale(.24); */
+    position: absolute;
+    margin-top: 250px;
+    margin-left: 500px;
+}
+
+.index-password-prompt {
+    font-size: 22px;
+    font-family: 'arcade-font';
+    margin-top: 710px;
+    margin-left: -250px;
+    color: var(--dark);
+    text-align: center;
+    text-decoration: none;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ ABOUT @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+.about { 
+    border: 3px solid var(--bright);
+    height: 690px;
+    background-image: url("images/background/tall2.png");
+    background-position: center;
+}
+.about-content {
+    display: none;
+}
+
+/* the text displayed inside drawing*/
+.about h1 { 
+    width: 465px;
+    padding:10px;
+    font-family: 'arcade-font';
+    font-size: 18px;
+    margin-top: 100px;
+    margin-left:9px;
+    word-wrap: break-word;
+    /* background-color: red; */
+}
+.about h1::first-letter {
+    font-family: 'arcade-font';
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+/* password prompt stlying */
+.about-password-prompt {
+    font-size: 22px;
+    font-family: 'arcade-font';
+    position: absolute;
+    margin-bottom: -734px;
+    color: var(--dark);
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* person looking left */
+.about-person {
+    z-index: 999;
+    position: absolute;
+    margin-top: 300px;
+    margin-right: 333px;
+    /* background-color: aqua; */
+}
+
+/* arrow looking left */
+.about-arrow-left {
+    transform: scale(.5);
+    z-index: 999;
+    position: absolute;
+    margin-top: 30px;
+    margin-right: 666px;
+}
+/* arrow looking right */
+.about-arrow-right {
+    transform: scaleX(-1) scale(.5);
+    z-index: 999;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 666px;
+}
+
+/*bat img*/
+.about-bat {
+    transform: scale(0.06);
+    position: absolute;
+    margin-left: 220px;
+    margin-top: 370px;
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ RESUME @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.resume { 
+    background: #464646;
+    border: 3px solid var(--bright);
+    background-position: center;
+    display:flex;
+}
+.resume iframe { 
+    background-color: var(--dark);
+    width: 1000px;
+    padding: 10px;
+    font-family: 'arcade-font';
+    height: 720px;
+}
+
+/* button for link */
+.resume-button { 
+    background-color: #afafaf8f;
+    transform: scale(.1);
+    z-index: 999;
+    position: absolute;
+    margin-top: -215px;
+    margin-left: -287px;
+}
+
+.resume-password-prompt { 
+    font-size: 22px;
+    font-family: 'arcade-font';
+    white-space: nowrap;
+    position: absolute;
+    margin-top: 750px;
+    margin-left: 332px;
+    color: var(--dark);
+    text-decoration: none;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ certifications @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.cert { 
+    background: var(--dark);
+    border: 3px solid var(--bright);
+    background-position: center;
+    padding:10px;
+    display:flex;
+}
+.cert-content {
+    display: none;
+    width: 863px; 
+    height:670px;
+}
+.cert img {
+    width: 865px;
+}
+
+/* arrow looking left */
+.cert-arrow-left {
+    transform: scale(.5);
+    z-index: 999;
+    position: absolute;
+    margin-top: 10px;
+    margin-right: 1070px;
+}
+/* arrow looking right */
+.cert-arrow-right {
+    transform: scaleX(-1) scale(.5);
+    z-index: 999;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 1070px;
+}
+
+.cert-password-prompt { /* text style at bottom */
+    font-size: 22px;
+    font-family: 'arcade-font';
+    white-space: nowrap;
+    position: absolute;
+    margin-top: 690px;
+    margin-left: 250px;
+    color: var(--dark);
+    text-decoration: none;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ PROJECTS @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+.projects { /* styling for about page */
+    border: 3px solid var(--bright);
+    height: 690px;
+    background-image: url("images/background/tall2.png");
+    background-position: center;
+    /* background-size: contain; */
+}
+.projects-content {
+    display: none;
+}
+.projects h1 { /*the text*/
+    font-size: 18px;
+    width: 465px;
+    padding:10px;
+    font-family: 'arcade-font';
+    margin-top: 100px;
+    margin-left:9px;
+    word-wrap: break-word;
+    /* background-color: aqua; */
+}
+.projects h1::first-letter {
+    font-family: 'arcade-font';
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+/* arrow looking left */
+.projects-arrow-left {
+    transform: scale(.5);
+    z-index: 999;
+    position: absolute;
+    margin-top: 30px;
+    margin-right: 666px;
+}
+/* arrow looking right */
+.projects-arrow-right {
+    transform: scaleX(-1) scale(.5);
+    z-index: 999;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 666px;
+}
+/* person looking left */
+.projects-person {
+    z-index: 999;
+    position: absolute;
+    margin-top: 300px;
+    margin-right: 333px;
+    /* background-color: aqua; */
+}
+
+.projects-password-prompt {
+    font-size: 22px;
+    font-family: 'arcade-font';
+    position: absolute;
+    margin-bottom: -734px;
+    color: var(--dark);
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+
+/* @@@@@@@@@@@ FOOTER @@@@@@@@@@@*/
+footer {
+    display: none; /*flex*/
+    /* justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    background-color: var(--bright);
+    font-size: 15px;
+    font-family: 'arcade-font';
+    margin-left: 20%;
+    margin-right: 20%; */
+}

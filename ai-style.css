@@ -1,0 +1,98 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li, textarea {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #111;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+/* Header Styles */
+.global-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header-title {
+    font-size: 2rem;
+}
+
+.header-nav ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.header-nav li {
+    margin-right: 20px;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #66ccff;
+    font-size: 1.2rem;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #222;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.section-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.section-list {
+    list-style: none;
+    margin-left: 20px;
+}
+
+.section-item {
+    margin-bottom: 10px;
+}
+
+.section-link {
+    color: #66ccff;
+    text-decoration: none;
+}
+
+/* Style for the final prompt textbox */
+.final-prompt {
+    width: 50%;
+    height: 333px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #66ccff;
+    border-radius: 5px;
+    resize: none; /* Prevents resizing of the textarea */
+    margin: 10px auto; /* Center the textbox horizontally and add spacing */
+    display: block; /* Ensure it's a block-level element for centering */
+}
